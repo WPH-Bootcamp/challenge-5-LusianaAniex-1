@@ -34,20 +34,18 @@ function listBooks(): void {
 }
 
 function searchBook(title?: string): void {
-    // Handle both test and README requirements
-    if (title === undefined) {
-        // Untuk test
-        console.log('Please provide a title to search.');
-        return;
-    }
-    
-    console.log(`Search Results for "${title}":`);
+  // Handle both test and README requirements
+  if (title === undefined) {
+    // Untuk test
+    console.log('Please provide a title to search.');
+    return;
+  }
+
+  console.log(`Search Results for "${title}":`);
 
   // PENTING: CASE-SENSITIVE search (sesuai test)
-  // Test mengharapkan "the catcher" tidak menemukan "The Catcher in the Rye"
-  const foundBooks = books.filter(
-    (book) => book.title.includes(title) // TIDAK pakai toLowerCase()
-  );
+
+  const foundBooks = books.filter((book) => book.title.includes(title));
 
   // PENTING: Format pesan spesifik sesuai test
   if (foundBooks.length === 0) {
