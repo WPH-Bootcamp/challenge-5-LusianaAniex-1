@@ -1,12 +1,15 @@
 {
-  "name": "t-challenge5-br",
+  "name": "t-challenge5-book-management",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "jest"
+    "test": "jest",  
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
